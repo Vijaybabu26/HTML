@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    table, th, td {
+    border:1px solid black;
+    }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>TO DO LIST PROJECT</h1>
+        <table style="width: 80%;">
+            <th>Date</th>
+            <th>Information</th>
+            <tr ><td id = "b"></td> <td id = "a"></td></tr>                      
+        </table>
+    <div>
+        <label style="font-size: 30px;"> To Do List :</label>
+        <input id="Text" type="text" placeholder="Information" style="font-size: 30px;"><br>
+        <label style="font-size: 30px;"> Choose Date :</label>
+        <input id="Date" type = "date" placeholder="Choose Date" style="font-size: 30px;"><br>
+        <button onclick="a();addItem();">SUBMIT</button>
+    </div>
+    <table style="width: 50%;">
+        <th>Date</th>
+        <th>Information</th>
+        <tr ><td id = "c"></td> <td id = "d"></td></tr>  
+
+    </table>
+    </center>
+</body>
+</html>
+<script>
+    function a(){
+    var x = document.getElementById("Text").value;
+    document.getElementById("a").innerHTML = x;
+    var y = document.getElementById("Date").value;
+    document.getElementById("b").innerHTML = y;
+    // document.getElementById("c").innerHTML = y;
+    // document.getElementById("d").innerHTML = x;
+    }
+    function addItem() {
+            var input = document.getElementById("Text").value;
+            var li = document.createElement("li");
+            li.appendChild(document.createTextNode(input));
+            document.getElementById("c").appendChild(li);
+            var input = document.getElementById("Date").value;
+            var li = document.createElement("li");
+            li.appendChild(document.createTextNode(input));
+            document.getElementById("d").appendChild(li);
+    }
+    
+</script>
