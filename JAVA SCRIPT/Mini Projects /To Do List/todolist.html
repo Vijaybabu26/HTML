@@ -46,45 +46,43 @@
             
               
             var taskinput = document.getElementById('Tododata').value;
-            var dateinput = document.getElementById('desc').value;
+            var dateInput = document.getElementById('desc').value;
             var tableBody = document.getElementById('Task-Info');
 
-            
-            
-            
-            var newrow = document.createElement('tr');
-            var newdata = document.createElement('td');
-            newdata.innerHTML = taskinput;
-            newrow.appendChild(newdata);
+            if (taskinput === "" || dateInput === "") {
+                alert('Please Fill All The Feilds');
+                return;
+            } else {
+                var newrow = document.createElement('tr');
+                var newdata = document.createElement('td');
+                newdata.innerHTML = taskinput;
+                newrow.appendChild(newdata);
 
-            var newtask = document.createElement('td');
-            newtask.innerHTML = dateinput;
-            newrow.appendChild(newtask);
+                var newtask = document.createElement('td');
+                newtask.innerHTML = dateInput;
+                newrow.appendChild(newtask);
 
-            
+                var taskstatus = document.createElement('td');
+                var checkbox = document.createElement('input');
+                checkbox.type = 'checkBox';
+                taskstatus.appendChild(checkbox);
+                newrow.appendChild(taskstatus);
 
-            var taskstatus = document.createElement('td');
-            var checkbox = document.createElement('input');
-            checkbox.type = 'checkbox';
-            taskstatus.appendChild(checkbox);
-            newrow.appendChild(taskstatus);
-           
-            tableBody.appendChild(newrow);
-            checkbox.onchange = checkfunction;
-                dateInput.value = '';
-                messageInput.value = '';
-                if (!dateInput.value || !messageInput.value) {
-            alert('Some Fields Are Missing !!!!');
-            return;
+                tableBody.appendChild(newrow);
+                checkbox.onchange = checkfunction;
+                alert('Added to the List');
             }
+                
 
         }
 
         
         function checkfunction(){
-            var tableBody = document.getElementById('task-Info');
+            var tableBody = document.getElementById('Task-Info');
             if(this.checked){
                 tableBody.appendChild(this.parentNode.parentNode);
+            }else{
+                tableBody.insertBefore(this.parentNode.parentNode,tableBody.firstChild);
             }
         }
         
