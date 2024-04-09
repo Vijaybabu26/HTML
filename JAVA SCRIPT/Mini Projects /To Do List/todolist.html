@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <link rel="icon" type="image/x-icon" href="https://www.krasamo.com/wp-content/uploads/Screen-Shot-2020-06-30-at-4.38.47-PM.png">
+    <style>
+        .table, th, td {
+        border:1px black;
+        border-style: solid;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h3> TO DO LIST </h3>
+        <!-- <table>
+            <tr><th>DATE</th><th>TO DO DESCRIPTION</th><th>STATUS</th></tr>
+            <tr><td id = "daterow"></td><td id = "descrow"></td><td><input type = "checkbox"></td></tr>
+        </table> -->
+        <br>
+        <label>Date : </label>
+        <input type="date" id="Tododata">
+        <br><br>
+        <label>To Do Desc : </label>
+        <textarea id="desc" placeholder="Enter the Description"></textarea>
+        <br><br>
+        <button onclick="tabledata()">SUBMIT</button>
+        <table>
+            <tr><th>DATE</th><th>TO DO DESCRIPTION</th><th>STATUS</th></tr>
+            <!-- <tr><td id = "Tododata"></td><td id = "desc"></td><td><input type = "checkbox"></td></tr> -->
+            <tbody id="Task-Info"></tbody>
+        </table>
+    </center>
+    <script>
+        function data(){
+            var x = document.getElementById('Tododata').value;
+            document.getElementById('daterow').innerHTML = x;
+            // document.getElementById('a').innerHTML = x;
+            var y = document.getElementById('desc').value;
+            document.getElementById('descrow').innerHTML = y;
+            // document.getElementById('b').innerHTML = y;
+        }
+        function tabledata(){
+            
+              
+            var taskinput = document.getElementById('Tododata').value;
+            var dateinput = document.getElementById('desc').value;
+            var tableBody = document.getElementById('Task-Info');
+
+            
+            
+            
+            var newrow = document.createElement('tr');
+            var newdata = document.createElement('td');
+            newdata.innerHTML = taskinput;
+            newrow.appendChild(newdata);
+
+            var newtask = document.createElement('td');
+            newtask.innerHTML = dateinput;
+            newrow.appendChild(newtask);
+
+            
+
+            var taskstatus = document.createElement('td');
+            var checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            taskstatus.appendChild(checkbox);
+            newrow.appendChild(taskstatus);
+           
+            tableBody.appendChild(newrow);
+            checkbox.onchange = checkfunction;
+                dateInput.value = '';
+                messageInput.value = '';
+                if (!dateInput.value || !messageInput.value) {
+            alert('Some Fields Are Missing !!!!');
+            return;
+            }
+
+        }
+
+        
+        function checkfunction(){
+            var tableBody = document.getElementById('task-Info');
+            if(this.checked){
+                tableBody.appendChild(this.parentNode.parentNode);
+            }
+        }
+        
+
+    </script>
+</body>
+</html>
