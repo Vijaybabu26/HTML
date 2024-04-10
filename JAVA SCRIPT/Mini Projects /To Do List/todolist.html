@@ -7,18 +7,52 @@
     <link rel="icon" type="image/x-icon" href="https://www.krasamo.com/wp-content/uploads/Screen-Shot-2020-06-30-at-4.38.47-PM.png">
     <style>
         .table, th, td {
-        border:1px black;
+        border:1px rgb(255, 255, 255);
         border-style: solid;
+        color: rgb(0, 0, 0);
+        height: 10px;
+        background-color: rgb(255, 255, 255);
+        color: black;
         }
+        body{
+            background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3cd00a37-abf7-433a-ad86-1e79c1b2a8b2/derygqg-b8993086-4f34-40c9-bd18-938768dcbb26.png/v1/fill/w_1280,h_800,q_80,strp/windows_11_dark_color_default_wallpaper_free_by_theekshananirmal_derygqg-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODAwIiwicGF0aCI6IlwvZlwvM2NkMDBhMzctYWJmNy00MzNhLWFkODYtMWU3OWMxYjJhOGIyXC9kZXJ5Z3FnLWI4OTkzMDg2LTRmMzQtNDBjOS1iZDE4LTkzODc2OGRjYmIyNi5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19._hEQ_fhpMxxn-iZLyyqMcm3L3_gcDRGykULUhMbbXlU');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        button{
+            color: rgb(0, 0, 0);
+            background-color: rgb(0, 137, 11);
+            padding: 10px;
+            text-align: justify;
+        }
+        label{
+            color: aliceblue;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 30px;
+        }
+        #Tododata {
+        width: 200px;
+        height: 30px;
+        border: 1px solid #ccc;
+        -radius: 4px;
+        padding: 5px;
+        font-size: 16px;
+        background-color: #f8f8f8;
+        font-weight: 100;
+        }
+
+       
     </style>
 </head>
 <body>
     <center>
-        <h3> TO DO LIST </h3>
+        <h1 style="color:aliceblue"> TO DO LIST </h1>
         <!-- <table>
             <tr><th>DATE</th><th>TO DO DESCRIPTION</th><th>STATUS</th></tr>
             <tr><td id = "daterow"></td><td id = "descrow"></td><td><input type = "checkbox"></td></tr>
         </table> -->
+        
         <br>
         <label>Date : </label>
         <input type="date" id="Tododata">
@@ -34,21 +68,14 @@
         </table>
     </center>
     <script>
-        function data(){
-            var x = document.getElementById('Tododata').value;
-            document.getElementById('daterow').innerHTML = x;
-            // document.getElementById('a').innerHTML = x;
-            var y = document.getElementById('desc').value;
-            document.getElementById('descrow').innerHTML = y;
-            // document.getElementById('b').innerHTML = y;
-        }
+    
         function tabledata(){
             
               
             var taskinput = document.getElementById('Tododata').value;
             var dateInput = document.getElementById('desc').value;
             var tableBody = document.getElementById('Task-Info');
-
+            
             if (taskinput === "" || dateInput === "") {
                 alert('Please Fill All The Feilds');
                 return;
@@ -72,8 +99,7 @@
                 checkbox.onchange = checkfunction;
                 alert('Added to the List');
             }
-                
-
+        
         }
 
         
