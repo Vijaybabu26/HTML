@@ -1,1 +1,23 @@
 prepare the html code 
+Step1:HTML PART
+ Input Fields:
+   →  Date  
+ →  Task description  [Text input field]
+ Button:
+ →  Add Task
+ Table:
+  → Columns:
+   →  Date
+  →  Task Description
+  →  Status (input Type : Checkbox)
+Step2: JAVASCRIPT WORK:
+JavaScript Functionality:
+→  Function to add a task:
+  → Takes the date and task description from input fields using the on click event on add task.
+     →  Creates a new row in the table with the date, task description, and a checkbox for status for each date and task information given from input tags.
+    → Append the new row to the table.
+
+  →  Function to handle checkbox change.
+  →  Move the corresponding row to the end of the table when the checkbox is checked using the on change event on checkBox.
+
+
