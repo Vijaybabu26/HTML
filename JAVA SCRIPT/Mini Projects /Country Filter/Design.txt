@@ -1,0 +1,10 @@
+Step 1 : We have to create the HTML Part:
+1. Input type text and unorder list for the countries.
+2. another input feild for the adding another new country Name.
+3.button for adding country to add to list of the country.
+
+Step 2 : We have to create Java Script Part For the filtering the country names from the list
+1.Created the function for Filtering Coutries.
+2. from oninput event we fetch the value from etxt and using for loop we compare the each element in the list.
+3. Another function for the adding new Country name to the list.
+4. we fecth the value from the text box and add to country list.
