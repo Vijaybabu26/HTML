@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Metric Conversion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin: 0 auto;
+            width: 300px;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="kilometers">Kilometers:</label>
+        <input type="number" id="kilometers" name="kilometers" >
+        <!-- oninput="convert(this.value)" -->
+        <button onclick="convert()">Convert to Miles</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function convert() {
+            var km = document.getElementById('kilometers').value;
+            var miles = km * 0.621371;
+            document.getElementById('result').innerHTML = km + " kilometers is equal to " + miles.toFixed(2) + " miles.";
+        }
+    </script>
+</body>
+</html>
