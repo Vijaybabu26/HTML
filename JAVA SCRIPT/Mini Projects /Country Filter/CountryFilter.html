@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Country Filter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin: 0 auto;
+            width: 300px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="filter">Filter:</label>
+        <input type="text" id="filter" oninput="filterCountries()">
+        <ul id="country-list">
+            <li>United States</li>
+            <li>Canada</li>
+            <li>Mexico</li>
+            <li>United Kingdom</li>
+            <li>France</li>
+            <li>Germany</li>
+            <li>Italy</li>
+            <li>Spain</li>
+            <li>China</li>
+            <li>Japan</li>
+            <li>India</li>
+            <li>Australia</li>
+            <li>Brazil</li>
+            <li>South Africa</li>
+        </ul>
+        <input type="text" id="add">
+        <button id="addCountry" onclick="addCountry()">Add A New Country</button>
+    </div>
+
+    <script>
+        function filterCountries() {
+            var filter = document.getElementById('filter').value.toUpperCase();
+            var ul = document.getElementById('country-list');
+            var li = ul.getElementsByTagName('li');
+
+            for (var i = 0; i < li.length; i++) {
+                var country = li[i].innerHTML;
+                if (country.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = '';
+                } else {
+                    li[i].style.display = 'none';
+                }
+            }
+        }
+
+        function addCountry(){
+            var country = document.getElementById('add').value;
+            var co = document.getElementById('country-list');
+            var addc = document.createElement('li');
+            addc.innerHTML = country;
+            co.appendChild(addc);
+        }
+    </script>
+</body>
+</html>
