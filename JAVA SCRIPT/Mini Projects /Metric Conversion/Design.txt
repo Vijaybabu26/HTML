@@ -1,1 +1,7 @@
-
+Step 1 : We Have To Create The HTML Part:
+       1. In HTML Input type is number 
+       2. created a button for converting the Kilomiter to miles.
+       3. In Button We Can add onclick event or oninput event to fetch the value from input type.
+Step 2 : We Have To Create Some Java Script For Caluculations Part:
+      1. In this , we created a Function Called Convert
+      2. In Function Convert Fetch the value from input type and perfom some calculation for the Convertion and to display the result in html part.
