@@ -14,34 +14,61 @@
             background-size: cover;
             background-attachment: fixed;
             text-shadow: 2px 2px 5px black;
-        }
-        .icons{
-            display: flex;
-            justify-content: space-around;
-            
-        }
-        .icons img{
-            height: 150px;
-            width: 150px;
-        }
-        .icon{
-            height: 60px;
-            width: 60px;
-            text-align: center;
             color: aliceblue;
-            font-size: xx-large;
-            justify-content: center;
         }
+        
         .header{
             text-align: center;
             color: aliceblue;
             font-size: xx-large;
+            width: 1150px;
+            height: 350px;
+            backdrop-filter: blur(30px);
+            border: 2px solid white;
+            border-radius: 16px;
         }
         .Login{
             display: flex;
             justify-content: space-around;
             color: rgb(255, 255, 255);
             font-size: larger;
+        }
+        .icons{
+            display: flex;
+            justify-content: space-evenly;         
+        }
+        .icons img{
+            height: 150px;
+            width: 150px;
+            
+            
+        }
+        .icon{
+            
+            height: 60px;
+            width: 60px;
+            text-align: center;
+            color: aliceblue;
+            font-size: xx-large;
+           
+        }
+        .center-table {
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid white;
+            color: #ffffff;
+            /* box-shadow: inset; */
+            backdrop-filter: blur(30px);
+            border: 2px solid white;
+            
+        }
+        th, td {
+            border: 1px solid white;
+            text-align: center;
+            border-radius: 16px;
+        }
+        table {
+            border-collapse: collapse;
         }
 
     </style>
@@ -61,40 +88,73 @@
               </svg>
               <a href="" style="text-decoration: none; color: aliceblue;"><h1>SIGN IN</h1></a>
         </div><br>
-    <div class="header">
         <h1>PAYMENT WEB APP</h1>
-        <div class="icons">
-            <div class="icon">
-            <a href=""><img src="https://cdn-icons-png.freepik.com/512/5044/5044888.png" alt=""></a>
-            <p>Bank Account</p>
-            </div>
-            <div class="icon">
-            <a href=""><img src="https://cdn-icons-png.freepik.com/512/4121/4121616.png"></a>
-            <p>Bank Account List</p>
-            </div>
-        
-            <div class="icon">
-            <a href=""><img src="https://cdn-icons-png.freepik.com/512/4303/4303328.png"></a>
-            <p>Wallet</p>
-            </div>
-            <!-- <div class="icon">
-            <a href=""><img src=" https://cdn-icons-png.freepik.com/512/10074/10074041.png"></a>
-            <p>Check Wallet Balance</p>
-            </div>
-            <div class="icon">
-            <a href=""><img src=" https://cdn-icons-png.freepik.com/512/7325/7325252.png"></a>
-            <p>Check Bank Balance</p>
-            </div> -->
-            <div class="icon">
-            <a href=""><img src="https://cdn-icons-png.freepik.com/512/4590/4590204.png"></a>
-            <p>Send Money</p>
-            </div>
-            <div class="icon">
-            <a href=""><img src="https://cdn-icons-png.freepik.com/512/8118/8118471.png"></a><br>
-            <p>Mini Statement</p>
-            </div>
-        
+     <div class="header">
+            <br>
+            <div class="icons">
+                <div class="icon">
+                <a href=""><img src="https://cdn-icons-png.freepik.com/512/5044/5044888.png" alt=""></a>
+                <p>Bank Account</p>
+                </div>
+                <div class="icon">
+                <a href=""><img src="https://cdn-icons-png.freepik.com/512/4121/4121616.png"></a>
+                <p>Bank Account List</p>
+                </div>
+            
+                <div class="icon">
+                <a href=""><img src="https://cdn-icons-png.freepik.com/512/4303/4303328.png"></a>
+                <p>Wallet</p>
+                </div>
+                <!-- <div class="icon">
+                <a href=""><img src=" https://cdn-icons-png.freepik.com/512/10074/10074041.png"></a>
+                <p>Check Wallet Balance</p>
+                </div>
+                <div class="icon">
+                <a href=""><img src=" https://cdn-icons-png.freepik.com/512/7325/7325252.png"></a>
+                <p>Check Bank Balance</p>
+                </div> -->
+                <div class="icon">
+                <a href=""><img src="https://cdn-icons-png.freepik.com/512/4590/4590204.png"></a>
+                <p>Send Money</p>
+                </div>
+                <div class="icon">
+                <a href=""><img src="https://cdn-icons-png.freepik.com/512/8118/8118471.png"></a><br>
+                <p>Mini Statement</p>
+                </div>
+            <br>
         </div>
+    <div class="">
+
+    </div>
+       
+        
+    </div>
+    <div class="Services">
+        <br><table class="center-table">
+            <th><h1>Our Services</h1></th>
+            <tr>
+                <td>User Registration & Management: Users can create an account, manage their profile, and maintain their transaction history.</td>
+            </tr>
+            <tr>
+                <td>Secure Payment Processing: The application securely processes transactions using various payment methods such as credit/debit cards, digital wallets, bank transfers, etc.</td>
+            </tr>
+            <tr>
+                <td> Encryption & Security: To ensure the safety of user data and transaction details, the application uses high-level encryption and follows industry-standard security protocols. </td>
+            </tr>
+            <tr>
+                <td> Multi-Currency Support: The application supports multiple currencies, allowing users to make international transactions effortlessly. </td>
+            </tr>
+            <tr>
+                <td> Instant Notifications: Users receive instant notifications about transaction status, updates, and other relevant information. </td>
+            </tr>
+            <tr>
+                <td>  User-Friendly Interface: The application has an intuitive and easy-to-navigate interface, making it accessible for all users, regardless of their technical proficiency. </td>
+            </tr>
+            <tr>
+                <td> Customer Support: The application provides robust customer support to resolve any issues or queries that users might have. </td>
+            </tr>   
+        </table>
+
     </div>
     </center>
 </body>
