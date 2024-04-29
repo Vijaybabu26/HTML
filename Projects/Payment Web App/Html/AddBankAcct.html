@@ -20,11 +20,18 @@
             font-size: 40px;
             text-shadow: 2px 2px 5px black;
         }
-        .bankacctform{
+        form{
             width: 700px;
         }
         .AddBank marquee{
             color: aliceblue;
+        }
+        .bankacctform{
+            height: 550px;
+            width: 800px;
+            backdrop-filter: blur(30px);
+            border: 2px solid white;
+            border-radius: 16px;
         }
     </style>
 </head>
@@ -33,7 +40,7 @@
     <div class="AddBank">
         <h1> Bank Account Details </h1>
         <marquee>Enter the Bank Account Details And Click On Submit</marquee><br>
-        <div class="bankacctform">
+        <div class="bankacctform"><br><br>
         <form >
             <div class="form-floating">
                 <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
@@ -62,6 +69,7 @@
                 <label for="floatingPassword">Bank Acct PIN</label>
             </div><br>
             <input type="submit" class="btn btn-success">
+           
         </form>
         </div>
         
