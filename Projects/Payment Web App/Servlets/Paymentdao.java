@@ -50,9 +50,10 @@ public static boolean Logindb(String Phno ,String PassWord) {
 			ResultSet rs = st.executeQuery(loginValidateQuery);
 			while (rs.next()) {
 				System.out.println("Login Successfull !!");
+				return true;
 			}
 			Con.close();
-			return true;
+			
 	} catch (ClassNotFoundException | SQLException e) {	
 		e.printStackTrace();
 	}

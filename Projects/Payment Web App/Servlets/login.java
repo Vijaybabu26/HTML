@@ -35,6 +35,8 @@ public class login extends HttpServlet {
 			rd.forward(request, response);
 			System.out.println("login Success");
 		}else {
+			response.setContentType("text/html");
+			response.getWriter().write("<p style='color:red'>INVALID PASSWORD</p>");
 			RequestDispatcher rd = request.getRequestDispatcher("/Error.html");
 			rd.include(request, response);
 			System.out.println("login Failed");
