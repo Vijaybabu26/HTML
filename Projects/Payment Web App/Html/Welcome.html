@@ -12,7 +12,6 @@
             background-image: url('https://images7.alphacoders.com/979/979778.jpg');
             background-size: cover;
             background-attachment: fixed;
-            text-shadow: 2px 2px 5px black;
             
         }
         .header{
@@ -26,9 +25,18 @@
                  
         }
         .Login{
-            height: 50px;
+            height: 500px;
             width: 500px;
-            
+            backdrop-filter: blur(30px);
+            border: 2px solid white;
+            border-radius: 16px;
+
+        }
+        .loginbox{
+            height: 40px;
+            width: 450px;
+           
+    
         }
     </style>
 </head>
@@ -43,30 +51,37 @@
         <h4>It provides a secure and efficient method for businesses and individuals to send, receive, and process payments over the internet.</h4>
         <br>
         <button type="button" class="btn btn-outline-light" onclick="scrollToWel()">LOGIN</button>
-    </div><br>
+    </div><br><br>
 
     
     
     <div class="Login">
+        <br>
         <h1 style="font-size: xxx-large; color: whitesmoke;"> LOGIN </h1>
         <br>
-        <form>
+        <div class="loginbox">
+        <form action="http://localhost:8080/paymentweb/login" method="post">
+        
         <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Email address</label>
+            <input type="Text" class="form-control" id="floatingInput" placeholder="No" name="phno">
+            <label for="floatingInput">Phno</label>
         </div><br>
         <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
             <label for="floatingPassword">Password</label>
+           
         </div><br>
-        <button type="submit" class="btn btn-success">SUBMIT</button>
-        </form>
-        <br><br>
+        
+        <button type="submit" class="btn btn-success">SUBMIT</button><br>
         <svg xmlns="http://www.w3.org/2000/svg" width='50px' height='50px' fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16" style="color: aliceblue;">
             <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
           </svg>
        <a href="" style=" color: rgb(255, 255, 255); font-size: xxx-large; text-decoration: none;"> <h1 >REGISTER</h1><br></a>
     
+        </form>
+        <br><br>
+        </div>
+        
     </div><br><br>
 
     
