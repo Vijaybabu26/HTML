@@ -42,9 +42,4 @@ HTML PORTFOLIO
   <img src="https://1000logos.net/wp-content/uploads/2018/04/Gmail-logo-new.jpg" height="60" alt="gmail logo"  />
   <img src="https://logos-world.net/wp-content/uploads/2020/04/Linkedin-Logo.png" height="60" alt="linkedin logo"  />
 </div>
-<img src="https://raw.githubusercontent.com/maurodesouza/maurodesouza/output/snake.svg" alt="Snake animation" />
-###
 
-
-
-###
